@@ -13,7 +13,7 @@
 :root{
     --bg-color: #191919;
     --second-bg-color: #101010;
-    --main-color: #e9204f;
+    --main-color: rgb(248, 252, 8);
     --text-color: #fff;
     --second-color: #e4e4e4;
     --other-color: #c6c9d8bf;
@@ -23,3 +23,78 @@
     --p-font: 1.1rem;
 }
 
+body{
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 11%;
+    border-bottom: 1px solid transparent;
+    transition: all ease .50s;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    color: var(--main-color);
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.navlist{
+    display: flex;
+}
+
+.navlist a {
+    color: var(--second-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    margin: 0 40px;
+    transition: all ease .40s;
+}
+
+.navlist a:hover{
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 42px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+section{
+    padding: 120px 19% 100px;
+}
+
+.Home {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: url(../images/Blac_BG.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hero-text {
+    color: var(--second-color);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    word-spacing: 10px;
+}
