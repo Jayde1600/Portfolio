@@ -10,6 +10,7 @@
     outline: none;
 }
 
+
 :root{
     --bg-color: #191919;
     --second-bg-color: #101010;
@@ -17,7 +18,6 @@
     --text-color: #fff;
     --second-color: #e4e4e4;
     --other-color: #c6c9d8bf;
-
     --h1-font: 7rem;
     --h2-font: 3.5rem;
     --p-font: 1.1rem;
@@ -83,11 +83,20 @@ header{
     display: none;
 }
 
-section{
+.home {
     padding: 120px 19% 100px;
 }
 
-.Home {
+.about {
+    padding: 120px 19% 100px;
+}
+
+.services {
+    min-height: 100vh;
+    padding: 10rem 4% 2rem;
+}
+
+.home {
     position: relative;
     min-height: 100vh;
     width: 100%;
@@ -97,6 +106,40 @@ section{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+
+.home .btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    transition: .5s ease;
+}
+
+.home .btn:hover {
+    box-shadow: none;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
 }
 
 .hero-text h3{
@@ -121,7 +164,7 @@ section{
     font-size: 25px;
     font-weight: 600;
     word-spacing: 5px;
-    margin-bottom: 3.5rem;
+    margin-bottom: 1rem;
 }
 
 .btn {
@@ -148,7 +191,7 @@ header.sticky {
     border-bottom: 1px solid #4e5055;
 }
 
-.About{
+.about{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     align-items: center;
@@ -164,8 +207,8 @@ header.sticky {
 .rounded-image {
     border-radius: 50%;
     border:4px solid #e4e4e4;
-    width: 355px; /* You can adjust the width as per your requirement */
-    height: 355px; /* You can adjust the height as per your requirement */
+    width: 355px;
+    height: 355px;
     object-fit: cover;
     overflow: hidden;
 }
@@ -192,4 +235,63 @@ span {
     font-size: var(--p-font);
     line-height: 30px;
     margin-bottom: 3rem;
+}
+
+.services {
+    background: var(--second-bg-color);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-center h2{
+    font-family: 'Dosis', sans-serif;
+    font-size: var(--h2-font);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.services h4 {
+    margin-bottom: 2rem;
+}
+
+.services-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.services-items .service-box {
+    width: calc(33.33% - 2rem);
+    background: var(--bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+    box-sizing: border-box;
+}
+
+.services-items .service-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+    box-shadow: 0 0 1rem var(--main-color);
+    transition: .5s ease;
+}
+
+.service-box i {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 8px;
+}
+
+.service-box h3 {
+    font-size: 1.6rem;
+}
+
+.service-box p {
+    margin: 1rem 0 3rem;
 }
