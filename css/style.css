@@ -10,6 +10,9 @@
     outline: none;
 }
 
+html {
+    overflow-x: hidden;
+}
 
 :root{
     --bg-color: #191919;
@@ -258,7 +261,11 @@ span {
     font-family: 'Dosis', sans-serif;
     font-size: var(--h2-font);
     font-weight: 800;
-    margin-bottom: 10px;
+    margin-bottom: 1.3rem;
+}
+
+.services h2 {
+    margin-bottom: 1rem;
 }
 
 .services h4 {
@@ -266,7 +273,7 @@ span {
     margin-bottom: 2rem;
 }
 
-.services-items {
+.services-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -275,8 +282,8 @@ span {
     margin-bottom: 3rem;
 }
 
-.services-items .service-box {
-    width: calc(33.33% - 2rem);
+.services-container .services-box {
+    width: calc(33.33% - 2rem); 
     background: var(--bg-color);
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
@@ -286,24 +293,23 @@ span {
     box-sizing: border-box;
 }
 
-.services-items .service-box:hover {
+.services-container .services-box:hover {
     border-color: var(--main-color);
     transform: scale(1.02);
     box-shadow: 0 0 1rem var(--main-color);
     transition: .5s ease;
 }
 
-.service-box i {
+.services-box i {
     font-size: 3rem;
     color: var(--main-color);
-    margin-bottom: 8px;
 }
 
-.service-box h3 {
+.services-box h3 {
     font-size: 1.6rem;
 }
 
-.service-box p {
+.services-box p {
     margin: 1rem 0 3rem;
 }
 
@@ -376,13 +382,13 @@ span {
     align-items: center;
     width: 5rem;
     height: 5rem;
-    background: var(--text-color);
+    background: transparent;
     border-radius: 50%;
 }
 
 .portfolio-layer a i {
-    font-size: 2rem;
-    color: var(--second-bg-color);
+    font-size: 1.8rem;
+    color: var(--text-color);
 }
 
 .contact h2 {
@@ -395,6 +401,21 @@ span {
     text-align: center;
     margin-bottom: 3rem;
 }
+
+.contact .input-box input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.contact .input-box input[type="number"]::-webkit-inner-spin-button, 
+.contact .input-box input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.contact .input-box input[type="number"] {
+    appearance: textfield;
+}
+
 
 .contact form .input-box {
     display: flex;
@@ -521,6 +542,9 @@ span {
     .contact {
         min-height: auto;
     }
+    .portfolio {
+        padding-bottom: 7rem;
+    }
     .footer {
         padding: 2rem 3%;
     }
@@ -588,14 +612,15 @@ span {
 }
 
 @media (max-width: 768px) {
-    .services h2 {
-        margin-bottom: 3rem;
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
     }
-
+    .services h2 {
+        margin-bottom: 2rem;
+    }
     .portfolio h2 {
         margin-bottom: 3rem;
     }
-
     .portfolio-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -609,14 +634,8 @@ span {
 }
 
 @media (max-width:450px) {
-    :root {
-        --h1-font: 3.5rem;
-        --h2-font: 2.5rem;
-    }
-
-    .hero-text h4 {
-        font-size: 16px;
-        word-spacing: 7px;
+    html {
+        font-size: 52%;
     }
 
     .contact form .input-box input {
