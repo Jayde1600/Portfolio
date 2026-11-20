@@ -1,208 +1,346 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Aphiwe Meslane Portfolio Website</title>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aphiwe Meslane — Junior Software Developer</title>
+  <meta name="description" content="Aphiwe Meslane is a junior software developer in Cape Town building reliable backend services with Java, Spring Boot, Apache Camel and Kubernetes.">
+  <meta name="theme-color" content="#F5F5F2">
 
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <!-- Social share preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aphiwe Meslane — Junior Software Developer">
+  <meta property="og:description" content="I build fast, friendly software. See my work and get in touch.">
+  <meta property="og:image" content="assets/img/portrait.webp">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
+  <!-- Load what the first screen needs before anything else -->
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/img/portrait.webp" as="image" type="image/webp" fetchpriority="high">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <header>
-        <a href="#" class="logo"><img src="images/my-logo.png"></a>
-        <div class="bx bx-menu" id="menu-icon"></div>
+<header class="site-header">
+  <nav class="site-nav" aria-label="Primary">
+    <a class="brand display" href="#top">Aphiwe Meslane</a>
+    <div class="site-nav__links">
+      <a class="nav" href="#work">Work</a>
+      <a class="nav" href="#toolkit">Toolkit</a>
+      <a class="nav" href="#about">About</a>
+      <a class="nav" href="#life">Life</a>
+      <a class="btn-ghost" href="#contact">Get in touch</a>
+    </div>
+  </nav>
+</header>
 
-        <ul class="navlist">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+<main id="main">
+
+  <!-- ============ Hero ============ -->
+  <section id="top" class="hero wrap">
+    <div class="hero__copy stack">
+      <p class="mono hero__status"><span class="status-dot"></span>Open to junior developer roles · Cape Town</p>
+      <h1 class="hero__title display">I build fast, friendly software<span class="accent">.</span></h1>
+      <p class="lede hero__lede">Hi, I'm Aphiwe, a junior software developer who sweats the details: reliable apps, clean, well-tested code and software that respects your time. Off the clock I'm gaming, hunting for new music or lost in a good film.</p>
+      <div class="hero__actions">
+        <a class="btn" href="#work">See my work<svg class="ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="ul" href="assets/files/Aphiwe-Meslane-CV.pdf" target="_blank" rel="noopener">View résumé</a>
+      </div>
+    </div>
+    <figure class="figure">
+      <img class="photo photo--portrait" src="assets/img/portrait.webp" alt="Aphiwe smiling, sitting on steps in a light blazer and jeans" width="900" height="1200" fetchpriority="high" decoding="async">
+      <figcaption class="mono">That's me · Cape Town</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ Now playing marquee ============ -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <div class="marquee__group">
+        <span><span class="mono">Now playing</span>Swim Good — Frank Ocean</span>
+        <span class="marquee__sep" aria-hidden="true"></span>
+        <span><span class="mono">Watching</span>Project Hail Mary</span>
+        <span class="marquee__sep" aria-hidden="true"></span>
+        <span><span class="mono">Playing</span>Phantom Blade Zero</span>
+        <span class="marquee__sep" aria-hidden="true"></span>
+        <span><span class="mono">Learning</span>[TECH YOU'RE LEARNING]</span>
+        <span class="marquee__sep" aria-hidden="true"></span>
+      </div>
+      <!-- Exact copy of the group above so the loop is seamless; keep them in sync -->
+      <div class="marquee__group" aria-hidden="true">
+        <span><span class="mono">Now playing</span>Swim Good — Frank Ocean</span>
+        <span class="marquee__sep"></span>
+        <span><span class="mono">Watching</span>Project Hail Mary</span>
+        <span class="marquee__sep"></span>
+        <span><span class="mono">Playing</span>Phantom Blade Zero</span>
+        <span class="marquee__sep"></span>
+        <span><span class="mono">Learning</span>[TECH YOU'RE LEARNING]</span>
+        <span class="marquee__sep"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 01 Work ============ -->
+  <section id="work" class="work wrap">
+    <div class="section-head">
+      <div class="section-head__title">
+        <p class="mono">01 — Selected work</p>
+        <h2 class="h2 display">Things I've built</h2>
+      </div>
+      <p class="section-head__note">A few projects I'm proud of: what each one does, how I built it and what it taught me.</p>
+    </div>
+
+    <article class="proj">
+      <div class="proj__media"><img class="proj-img" src="assets/img/wordvault.jpg" alt="Illustration of a magnifying glass over an open book" width="1344" height="896" loading="lazy" decoding="async"></div>
+      <div class="proj__body stack">
+        <p class="mono">01 · Personal project · Android</p>
+        <h3 class="proj__title display">WordVault</h3>
+        <p class="proj__desc">An English dictionary app for Android: look up a word and get its meaning, with text-to-speech so you can hear it read aloud.</p>
+        <dl class="proj__facts">
+          <dt class="mono">What I did</dt><dd>Built the app in Kotlin and added text-to-speech; more advanced features are in progress</dd>
+          <dt class="mono">What I learned</dt><dd>[One honest takeaway]</dd>
+        </dl>
+        <ul class="tags" aria-label="Built with">
+          <li class="tag">Kotlin</li><li class="tag">Android</li><li class="tag">Gradle</li>
         </ul>
-    </header>
-
-    <section class="home" id="home">
-        <div class="hero-text">
-            <h3>Welcome I'm</h3>
-            <h1>Aphiwe Meslane</h1>
-            <h4>Software Developer</h4>
-            <div class="social-media">
-                <a href="https://linkedin.com/in/aphiwe-meslane" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/aphiwe.meslane/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.facebook.com/aphiwe.meslane.50/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://github.com/Jayde1600" target="_blank"><i class="fa-brands fa-github"></i></a>
-            </div>
-            <a href="my_cv/Aphiwe Meslane Resume.pdf" class="btn" target="_blank"><i class="fa-solid fa-download"></i> Download CV</a>
+        <div class="proj__links">
+          <a class="ul" href="https://github.com/Jayde1600/WordVault-Dictionary-App" target="_blank" rel="noopener">Source code<svg class="ico" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
         </div>
-    </section>
+      </div>
+    </article>
 
-    <section class="about" id="about">
-        <div class="about_img">
-            <img src="images/big_me.png" class="rounded-image">
+    <article class="proj flip">
+      <div class="proj__media"><img class="proj-img" src="assets/img/disaster-recovery.jpg" alt="Lightning striking over a stormy landscape" width="1344" height="896" loading="lazy" decoding="async"></div>
+      <div class="proj__body stack">
+        <p class="mono">02 · Rosebank College · Web app</p>
+        <h3 class="proj__title display">Disaster Recovery</h3>
+        <p class="proj__desc">A donations platform for disaster relief: people donate, and an admin allocates those donations to the areas that need them most.</p>
+        <dl class="proj__facts">
+          <dt class="mono">What I did</dt><dd>Built the web app in C# with ASP.NET Core, wrote unit tests and deployed it to Azure through Azure Pipelines</dd>
+          <dt class="mono">What I learned</dt><dd>[One honest takeaway]</dd>
+        </dl>
+        <ul class="tags" aria-label="Built with">
+          <li class="tag">C#</li><li class="tag">ASP.NET Core</li><li class="tag">Azure</li><li class="tag">Azure Pipelines</li>
+        </ul>
+        <div class="proj__links">
+          <a class="ul" href="https://github.com/Jayde1600/Disaster-Recovery" target="_blank" rel="noopener">Source code<svg class="ico" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
         </div>
+      </div>
+    </article>
 
-        <div class="about-text">
-            <h2>About Me</h2>
-            <h5>Hello, I'm<span>  Aphiwe Meslane</span></h5>
-            <p>A proactive graduate with a Software Development Diploma from Rosebank College, 
-                showcasing strong academic achievements. Possessing excellent problem-solving and 
-                communication skills. My focus is on building a successful career in Software Development and
-                I am passionate about contributing as a Software Developer.
-            </p>
+    <article class="proj">
+      <div class="proj__media"><img class="proj-img" src="assets/img/health-foundation.jpg" alt="Screenshot artwork for the Health Foundation website" width="1344" height="896" loading="lazy" decoding="async"></div>
+      <div class="proj__body stack">
+        <p class="mono">03 · Rosebank College · Final-year group project</p>
+        <h3 class="proj__title display">Health Foundation website</h3>
+        <p class="proj__desc">A website our team built for the Health Foundation as our final-year project.</p>
+        <dl class="proj__facts">
+          <dt class="mono">What I did</dt><dd>[Your part in the team project]</dd>
+          <dt class="mono">What I learned</dt><dd>[One honest takeaway]</dd>
+        </dl>
+        <ul class="tags" aria-label="Built with">
+          <li class="tag">C#</li><li class="tag">.NET</li><li class="tag">Azure Pipelines</li>
+        </ul>
+        <div class="proj__links">
+          <a class="ul" href="https://github.com/Chaotic-Nature/Health-Foundation-XISD6329-" target="_blank" rel="noopener">Source code<svg class="ico" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
         </div>
-    </section>
+      </div>
+    </article>
 
-    <section class="services" id="services">
-        <div class="text-center">
-            <h2>My <span>Services</span></h2>
-            <h4>I'll Work With You, To Build Amazing Projects For You</h4>
+    <div class="more">
+      <h3 class="mono more__title">More on GitHub</h3>
+      <ul class="more__list">
+        <li>
+          <a class="more__row" href="https://github.com/Jayde1600/CheckList-App" target="_blank" rel="noopener">
+            <span class="more__name display">CheckList</span>
+            <span class="more__desc">A to-do app for daily tasks, saved to Firebase, with speech-to-text</span>
+            <span class="more__tech mono">Java · Android · Firebase</span>
+            <svg class="ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+        </li>
+        <li>
+          <a class="more__row" href="https://github.com/Jayde1600/Tempo-Stopwatch-App" target="_blank" rel="noopener">
+            <span class="more__name display">Tempo</span>
+            <span class="more__desc">A stopwatch and timer app</span>
+            <span class="more__tech mono">Java · Android</span>
+            <svg class="ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+        </li>
+        <li>
+          <a class="more__row" href="https://github.com/Jayde1600/My_Python_Projects" target="_blank" rel="noopener">
+            <span class="more__name display">Python projects</span>
+            <span class="more__desc">Five short projects: Hangman, a quiz game, Rock Paper Scissors, a countdown timer and a file sorter</span>
+            <span class="more__tech mono">Python</span>
+            <svg class="ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 02 Toolkit ============ -->
+  <section id="toolkit" class="toolkit wrap">
+    <div class="section-head__title">
+      <p class="mono">02 — Toolkit</p>
+      <h2 class="h2 display">What I work with</h2>
+    </div>
+    <div class="toolkit__grid">
+      <div class="toolkit__col stack">
+        <h3 class="mono">Languages</h3>
+        <p>Java</p>
+        <p>Python</p>
+        <p>Kotlin</p>
+        <p>C#</p>
+      </div>
+      <div class="toolkit__col stack">
+        <h3 class="mono">Frameworks &amp; libraries</h3>
+        <p>Spring Boot</p>
+        <p>Apache Camel</p>
+        <p>ASP.NET Core</p>
+        <p>JUnit &amp; Mockito</p>
+      </div>
+      <div class="toolkit__col stack">
+        <h3 class="mono">Tools &amp; platforms</h3>
+        <p>Kubernetes (RKE2)</p>
+        <p>Jenkins</p>
+        <p>Elastic Stack</p>
+        <p>Azure DevOps &amp; GitHub</p>
+      </div>
+      <div class="toolkit__col stack">
+        <h3 class="mono accent">Learning right now</h3>
+        <p>[TECH]</p>
+        <p>[TECH]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 About ============ -->
+  <section id="about" class="about-section wrap">
+    <div class="about">
+      <div class="about__lead stack">
+        <p class="mono">03 — About</p>
+        <p class="about__quote display">I got into code because [THE MOMENT YOU GOT HOOKED]<span class="accent">.</span></p>
+        <figure class="figure about__figure">
+          <img class="photo photo--square" src="assets/img/sunset.webp" alt="Silhouette with a backpack and bucket hat, watching the sun set over the coast" width="900" height="1200" loading="lazy" decoding="async">
+          <figcaption class="mono">Chasing sunsets · [PLACE]</figcaption>
+        </figure>
+      </div>
+      <div class="about__body stack">
+        <p class="about__text">I'm a junior software developer at ABSA Group, where I started as an intern in 2025. I work on backend integration, application migration and Kubernetes deployments, and I care about software that's reliable, secure and properly tested. I like solving problems with a team, explaining things clearly and getting a little better as an engineer every week.</p>
+        <dl class="facts">
+          <div><dt class="mono">Based in</dt><dd>Cape Town, South Africa</dd></div>
+          <div><dt class="mono">Studied</dt><dd>Diploma in IT (Software Development), Rosebank College</dd></div>
+          <div><dt class="mono">Experience</dt><dd>ABSA Group · intern 2025, junior developer 2026</dd></div>
+          <div><dt class="mono">Looking for</dt><dd>Junior software developer roles</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 Life ============ -->
+  <section id="life" class="life">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head__title">
+          <p class="mono">04 — Off the clock</p>
+          <h2 class="h2 display">The stuff that keeps me curious</h2>
         </div>
+        <p class="section-head__note">Trails, good food, one favourite place, and the games, music and films I keep coming back to.</p>
+      </div>
 
-        <div class="services-container">
-            <div class="services-box">
-                <i class="fa-solid fa-code"></i>
-                <h3>Web Development</h3>
-                <p>Creating responsive websites tailored to your needs.</p>
-            </div>
-        
-            <div class="services-box">
-                <i class="fa-brands fa-android"></i>
-                <h3>Android Development</h3>
-                <p>Building innovative mobile apps for Android.</p>
-            </div>
-            
-            <div class="services-box">
-                <i class="fa-solid fa-flask"></i>
-                <h3>Unit Testing</h3>
-                <p>Ensuring code quality with rigorous testing.</p>
-            </div>
-        </div>        
-    </section>
+      <div class="bento">
+        <figure class="tile big">
+          <img src="assets/img/hiking.webp" alt="Aphiwe smiling on a hiking trail with mountains behind, golden-hour light" width="1400" height="1063" loading="lazy" decoding="async" style="object-position: 50% 30%">
+          <figcaption class="ph-label">Out on the trails · [TRAIL OR MOUNTAIN]</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="assets/img/cape-town.webp" alt="Sitting on a rock high above Cape Town, looking out over the city and the bay" width="800" height="1067" loading="lazy" decoding="async" style="object-position: 50% 42%">
+          <figcaption class="ph-label">Favourite spot on earth · Cape Town from the top</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="assets/img/chess.webp" alt="A wooden chess board mid-game" width="1000" height="708" loading="lazy" decoding="async">
+          <figcaption class="ph-label">Chess · the slow kind of gaming</figcaption>
+        </figure>
 
-    <section class="portfolio" id="portfolio">
-        <div class="text-center">
-        <h2 class="h2">Latest <span>Projects</span></h2>
+        <div class="card">
+          <div class="card__head">
+            <svg class="ico" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h4M8 10v4M15 13h.01M18 11h.01"/><path d="M17.3 5H6.7a4 4 0 0 0-3.96 3.43l-.98 6.86A2.5 2.5 0 0 0 4.24 18c.73 0 1.42-.32 1.9-.87L8 15h8l1.86 2.13c.48.55 1.17.87 1.9.87a2.5 2.5 0 0 0 2.48-2.71l-.98-6.86A4 4 0 0 0 17.3 5z"/></svg>
+            <h3 class="display">Games on rotation</h3>
+          </div>
+          <ol>
+            <li><span class="mono">01</span>Red Dead Redemption 2</li>
+            <li><span class="mono">02</span>Elden Ring</li>
+            <li><span class="mono">03</span>Phantom Blade Zero</li>
+          </ol>
         </div>
-
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="images/check.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>CheckList</h4>
-                    <p>A CheckList App made in Java</p>
-                    <a href="https://github.com/Jayde1600/CheckList-App" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-up-right-from-square"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="portfolio-box">
-                <img src="images/search-book.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>WordVault</h4>
-                    <p>Is Dictionary App made in Kotlin</p>
-                    <a href="https://github.com/Jayde1600/WordVault-Dictionary-App" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-up-right-from-square"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/stop.jpeg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Tempo</h4>
-                    <p>A Stopwatch/Timer App made in Java</p>
-                    <a href="https://github.com/Jayde1600/Tempo-Stopwatch-App" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-up-right-from-square"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/lightning.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Disaster Recovery</h4>
-                    <p>Uses C# .Net Core and Azure</p>
-                    <a href="https://github.com/Jayde1600/Disaster-Recovery" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-up-right-from-square"></i>
-                    </a>
-                </div>
-            </div>
-            
-
-            <div class="portfolio-box">
-                <img src="images/python.png" alt="">
-                <div class="portfolio-layer">
-                    <h4>Python Projects</h4>
-                    <p>Consists of multiple short projects I worked on using Python</p>
-                    <a href="https://github.com/Jayde1600/My_Python_Projects" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-up-right-from-square"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/1stWeb.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Health Foundation Webstie</h4>
-                    <p>Group Project Website for our final year</p>
-                    <a href="https://github.com/Chaotic-Nature/Chaotic-Nature-XISD6329" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-up-right-from-square"></i>
-                    </a>
-                </div>
-            </div>
-
+        <div class="card">
+          <div class="card__head">
+            <svg class="ico" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            <h3 class="display">On repeat</h3>
+          </div>
+          <ol>
+            <li><span class="mono">01</span>Swim Good — Frank Ocean</li>
+            <li><span class="mono">02</span>Oh Yeah — Steve Lacy</li>
+            <li><span class="mono">03</span>Impossible — Clairo</li>
+          </ol>
         </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="text-center">
-        <h2 class="h2">Contact <span>Me</span></h2>
+        <div class="card">
+          <div class="card__head">
+            <svg class="ico" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/></svg>
+            <h3 class="display">Films I'd rewatch tonight</h3>
+          </div>
+          <ol>
+            <li><span class="mono">01</span>Joker (2019)</li>
+            <li><span class="mono">02</span>Dune</li>
+            <li><span class="mono">03</span>Project Hail Mary</li>
+          </ol>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="bde5757b-a170-45f6-b7a0-9cc57d120e1d">
-            <div class="input-box">
-                <input type="text" name="Full Name" placeholder="Full Name">
-                <input type="email" name="Email" placeholder="Email Address">
-            </div>
+</main>
 
-            <div class="input-box">
-                <input type="number" name="Phone Number" placeholder="Mobile Number">
-                <input type="text" name="Email Subject" placeholder="Email Subject">
-            </div>
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
+<!-- ============ 05 Contact ============ -->
+<footer id="contact" class="site-footer">
+  <div class="wrap">
+    <p class="mono">05 — Contact</p>
+    <h2 class="footer__title display">Let's build something<span class="accent">.</span></h2>
+    <p class="lede footer__lede">I'm looking for a team where I can ship real work, learn fast and ask good questions. If that sounds like yours, I'd love to hear from you.</p>
+    <div class="footer__actions">
+      <a class="btn" href="mailto:neomeslane@gmail.com">neomeslane@gmail.com<svg class="ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="ul" href="https://github.com/Jayde1600" target="_blank" rel="noopener">GitHub</a>
+      <a class="ul" href="https://www.linkedin.com/in/aphiwe-meslane/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="ul" href="assets/files/Aphiwe-Meslane-CV.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+    </div>
+    <div class="footer__base">
+      <p class="mono">© <span id="year">2026</span> Aphiwe Meslane · Designed &amp; built by me</p>
+      <p class="mono">PS: the little pixel guy has been snacking on dots the whole time you scrolled.</p>
+    </div>
+  </div>
+</footer>
 
-        </form>
-    </section>
+<!-- Scroll buddy: walks down the dotted track as you scroll, eating the dots -->
+<div class="buddy" aria-hidden="true">
+  <div class="buddy-track"></div>
+  <div class="buddy-sprite">
+    <svg class="byte" viewBox="0 0 16 16">
+      <rect class="acc" x="7" y="0" width="2" height="2"/>
+      <rect class="k" x="7.5" y="2" width="1" height="2"/>
+      <path class="acc" d="M3 4h10v1h1v8h-1v1H3v-1H2V5h1z"/>
+      <g class="eye"><rect class="w" x="4" y="6" width="3" height="3"/><rect class="k" x="5" y="7" width="2" height="2"/></g>
+      <g class="eye"><rect class="w" x="9" y="6" width="3" height="3"/><rect class="k" x="10" y="7" width="2" height="2"/></g>
+      <rect class="k mouth" x="6" y="10" width="4" height="2"/>
+      <rect class="k leg-a" x="4" y="14" width="2" height="2"/>
+      <rect class="k leg-b" x="10" y="14" width="2" height="2"/>
+    </svg>
+  </div>
+</div>
 
-    <section class="footer">
-        <h3>Aphiwe Jayde Neo Meslane</h3>
-        <p>Turning ideas into reality, one line of code at a time.</p>
-        <div class="footer-icon">
-            <a href="https://linkedin.com/in/aphiwe-meslane" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/aphiwe.meslane/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.facebook.com/aphiwe.meslane.50/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://github.com/Jayde1600" target="_blank"><i class="fa-brands fa-github"></i></a>
-        </div>
-        <br>
-            <p>&copy; 2024 Aphiwe Meslane. All rights reserved.</p>
-    </section>
-
-    <!-- Revealing items as you scroll from github -->
-
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
